@@ -13,6 +13,11 @@ function getTitle() {
     return NAME;
 }
 
+/* generate a cryptographically secure token */
+function generateSecureCrypto($length) {
+    return bin2hex(openssl_random_pseudo_bytes($length));
+}
+
 /* logs in the user */
 function login($username_or_email, $password_real, $skip = false) { /* [column]*/
     $mysqli = getConnection();
@@ -62,6 +67,36 @@ function login($username_or_email, $password_real, $skip = false) { /* [column]*
     }
 
     return 3; // unknown error
+}
+
+/* registers a new user */
+function register($username, $email, $password) { /* [column]*/
+    $mysqli = getConnection();
+    $password_hash = password_hash($password, PASSWORD_DEFAULT);
+    $stmt = $mysqli->prepare("INSERT INTO `users` (`id`, `username`, `password`, `name`, `email`, `banned`, `verified`, `description`, `location`, `rank`, `icon`) VALUES (NULL, ?, ?, ?, ?, 'false', 'false', 'Write something about yourself here...', 'N/A', '0', '/assets/user-icons/default.png')");
+    $stmt->bind_param('ssss', $username, $password_hash, $username, $email);
+    $stmt->execute();
+
+    try {
+        loginAttempt($mysqli, getUserByName($username)['id'], 'reg');
+    } catch(Exception $e) {
+        // ignore error
+    }
+}
+
+/* Check if profile icon exists or return the default one */
+function profileImageExists($icon) {
+    $default = '/assets/user-icons/default.png';
+    return (!gone($icon) ? (file_exists($_SERVER['DOCUMENT_ROOT'] . $icon) ? $icon : $default) : $default);
+}
+
+/* sets the url to the profile image */
+function setProfileImage($id, $url) {
+    $mysqli = getConnection();
+
+    $stmt = $mysqli->prepare("UPDATE `users` SET `icon`=? WHERE `id`=?");
+    $stmt->bind_param('si', $url, $id);
+    $stmt->execute() or die("Error: Failed to save settings.");
 }
 
 /* create an array with skills */

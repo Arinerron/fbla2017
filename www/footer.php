@@ -1,8 +1,4 @@
-<?php
-
-?>
-
-<footer>
+<footer class="footer navbar-static-bottom" style="">
     <div class="container">
         <div class="row">
             <div class="col-md-6">

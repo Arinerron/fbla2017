@@ -4,7 +4,7 @@
     </head>
 
     <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-        <section class="hero" id="intro">
+        <section class="hero parallax" id="intro">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-right navicon">
@@ -74,7 +74,7 @@
                 <div class="container">
                     <div class="row animatedParent">
                         <div class="col-md-4">
-                            <div class="animated rotateInDownLeft">
+                            <div class="animated fadeInDown">
                                 <div class="service-box">
                                     <div class="service-icon">
                                         <span class="fa fa-laptop fa-2x"></span>
@@ -91,7 +91,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="animated rotateInDownLeft slow">
+                            <div class="animated fadeInDown slow">
                                 <div class="service-box">
                                     <div class="service-icon">
                                         <span class="fa fa-camera fa-2x"></span>
@@ -108,7 +108,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="animated rotateInDownLeft slower">
+                            <div class="animated fadeInDown slower">
                                 <div class="service-box">
                                     <div class="service-icon">
                                         <span class="fa fa-code fa-2x"></span>
@@ -241,6 +241,26 @@
                 </div>
             </div>
         </section>  -->
+
+        <script>
+        (function(){
+
+          var parallax = document.querySelectorAll(".parallax"),
+              speed = 0.5;
+
+          window.onscroll = function(){
+            [].slice.call(parallax).forEach(function(el,i){
+
+              var windowYOffset = window.pageYOffset,
+                  elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+
+              el.style.backgroundPosition = elBackgrounPos;
+
+            });
+          };
+
+        })();
+        </script>
 
         <?php include_once "footer.php"; ?>
     </body>
