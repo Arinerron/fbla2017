@@ -3,7 +3,7 @@
         <?php include_once "header.php"; ?>
     </head>
 
-    <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+    <body class="top" id="page-top" data-spy="scroll" data-target=".navbar-custom">
         <section class="hero parallax" id="intro">
             <div class="container">
                 <div class="row">
@@ -15,13 +15,13 @@
                     <div class="col-md-8 col-md-offset-2 text-center inner">
                         <div class="animatedParent">
                             <h1 class="animated fadeInDown">Welcome</h1>
-                            <p class="animated fadeInUp">to the ultimate job-finding platform</p>
+                            <p class="animated fadeInUp">insert some sample text here</p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3 text-center">
-                        <a href="#about" class="learn-more-btn btn-scroll">Let's go!</a>
+                        <a href="#about" class="learn-more-btn btn-scroll">Alright, let's do it</a>
                     </div>
                 </div>
             </div>

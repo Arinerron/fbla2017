@@ -149,6 +149,11 @@ function isBruteForcing($id, $tops=15) {
 	return false;
 }
 
+/* alias for isSignedIn() */
+function isLoggedIn() {
+    return isSignedIn();
+}
+
 /* returns a boolean; whether or not the user is signed in */
 function isSignedIn() {
     return isset($_SESSION['signed_in']) && $_SESSION['signed_in'];
@@ -209,7 +214,7 @@ function checkCSRFToken($csrf) {
 
 /* prints the input for the CSRF token */
 function printCSRFToken() {
-    return '<input type="hidden" id="csrf" name="csrf" value="' . getCSRFToken() . '">';
+    return '<input type="hidden" style="display: none;" id="csrf" name="csrf" value="' . getCSRFToken() . '">';
 }
 
 
