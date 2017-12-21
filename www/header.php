@@ -20,7 +20,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="/" class="navbar-brand">openings.guide</a>
+          <a href="/" class="navbar-brand">insert site name later</a>
         </div>
 
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
