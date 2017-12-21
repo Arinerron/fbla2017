@@ -11,7 +11,7 @@
 <link href="/css/animations.css" rel="stylesheet" />
 <link href="/css/styles.css" rel="stylesheet">
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" id="navbar">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">

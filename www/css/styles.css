@@ -135,3 +135,9 @@ h3 {
     margin-right: auto;
     margin: 0 auto;
 }
+#navbar {
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    left: 0;
+}
