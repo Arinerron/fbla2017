@@ -82,15 +82,15 @@ html {
     background-size: cover;
 }
 .bgimg-1 {
-    background-image: url("https://source.unsplash.com/1600x900/?software,developers,programmers,hackers,hack,code,landscape,coders");
+    background-image: url("https://source.unsplash.com/1600x900/?landscape,water,mountains,forest");
     min-height: 100%;
 }
 .bgimg-2 {
-    background-image: url("https://source.unsplash.com/1600x900/?software,forest,developers,programmers,hackers,hack,code,coders");
+    background-image: url("https://source.unsplash.com/1600x900/?software,developers,coding,programmers,hackers,hacking,hack,code,coders,programming");
     min-height: 400px;
 }
 .bgimg-3 {
-    background-image: url("https://source.unsplash.com/1600x900/?software,desk,water,developers,programmers,hackers,hack,code,coders,nature");
+    background-image: url("https://source.unsplash.com/1600x900/?jobs,work,job,office,cubicle,desk,monitor,screen");
     min-height: 400px;
 }
 .caption {
@@ -114,8 +114,15 @@ h3 {
     font-weight: bold;
     color: #111;
 }
+.wrapper {
+    width: 500px;
+}
 
 @media only screen and (max-device-width: 1024px) {
+    .wrapper {
+        width: 100%;
+    }
+
     /* Turn off parallax scrolling for tablets and phones */
     .bgimg-1,
     .bgimg-2,
@@ -123,14 +130,15 @@ h3 {
         background-attachment: scroll;
     }
 }
+.submit {
+    width: 100%;
+}
 .main {
     color: #000;
     font-size: 25px;
 }
 #main {
     background-color: rgba(255, 255, 255, 0.5);
-    padding-bottom: 2%;
-    padding-top: 0.5%;
     margin-left: auto;
     margin-right: auto;
     margin: 0 auto;
