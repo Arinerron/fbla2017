@@ -3,7 +3,7 @@
         <?php include "header.php"; ?>
     <head>
     <body>
-        <div class="container">
+        <div class="container" id="indent">
             <div id="message">Success. Redirecting you to the index page...</div>
             <div id="message"></div>
 

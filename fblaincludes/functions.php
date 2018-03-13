@@ -1,11 +1,18 @@
 <?php
+
 include "config.php";
+include "database.php";
 
 sec_session_start();
 
 /* returns a new mysqli object */
 function getConnection() {
     return new mysqli(DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME);
+}
+
+/* returns a database object */
+function getDatabase() {
+    return new Database(DATABASE_HOST, DATABASE_NAME, DATABASE_USER, DATABASE_PASSWORD);
 }
 
 /* get title of website */
@@ -16,6 +23,15 @@ function getTitle() {
 /* generate a cryptographically secure token */
 function generateSecureCrypto($length) {
     return bin2hex(openssl_random_pseudo_bytes($length));
+}
+
+/* get details about the ip */
+function getDetailsIP($ip) {
+    /*
+     * Parameters:
+     * city, state, country, countryCode, isp, lat, long, org, query, region, timezone, zip, status
+     */
+    return json_decode(file_get_contents('http://ip-api.com/json/' . urlencode($ip)), true);
 }
 
 /* logs in the user */
@@ -82,6 +98,13 @@ function register($username, $email, $password) { /* [column]*/
     } catch(Exception $e) {
         // ignore error
     }
+}
+
+/* returns a list of users */
+function getUsers() {
+    $query = getDatabase()->query('SELECT * FROM `users`');
+    $query->execute();
+    return $query->getRows();
 }
 
 /* Check if profile icon exists or return the default one */

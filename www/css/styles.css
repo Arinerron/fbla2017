@@ -96,7 +96,7 @@ html {
 .caption {
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 40%;
     width: 100%;
     text-align: center;
     color: #000;
@@ -117,6 +117,32 @@ h3 {
 .wrapper {
     width: 500px;
 }
+#indent {
+    padding-top: 4%;
+}
+
+#footerpad {
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+
+#pad {
+    padding-top: 80px;
+}
+
+#count {
+    display: inline;
+}
+
+.blur {
+    -webkit-filter: blur(30px); -moz-filter: blur(30px);
+    -o-filter: blur(30px); -ms-filter: blur(30px);
+    filter: url(#blur); filter: blur(30px);  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+    -webkit-transition: 2s -webkit-filter linear;
+    -moz-transition: 2s -moz-filter linear;
+    -o-transition: 2s -o-filter linear;
+    transition: 2s filter linear;
+}
 
 @media only screen and (max-device-width: 1024px) {
     .wrapper {
@@ -131,7 +157,7 @@ h3 {
     }
 }
 .submit {
-    width: 100%;
+
 }
 .main {
     color: #000;
@@ -144,8 +170,18 @@ h3 {
     margin: 0 auto;
 }
 #navbar {
+    padding-top: 0.25%;
+    padding-bottom: 0.25%;
     position: fixed;
     z-index: 1;
     right: 0;
     left: 0;
+}
+
+footer {
+
+}
+
+.container.contentpanel {
+    overflow-wrap: break-word;
 }

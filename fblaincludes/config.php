@@ -1,8 +1,8 @@
 <?php
 
 /* MAIN CONFIGURATION */
-define("NAME", "openings.guide"); // The name of the site
-define("SITE", "jobs.openings.guide"); // the public-facing domain or IP address, if any
+define("NAME", "discoverjobs.info"); // The name of the site
+define("SITE", "discoverjobs.info"); // the public-facing domain or IP address, if any
 define("HTTPS", true); // enable if host is using https protocol rather than http
 define("SECURE", true); // FOR DEVELOPMENT ONLY! Set to false for development mode
 

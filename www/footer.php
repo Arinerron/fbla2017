@@ -1,5 +1,5 @@
 <footer class="footer navbar-static-bottom" style="">
-    <div class="container">
+    <div class="container" id="footerpad">
         <div class="row">
             <div class="col-md-6">
                 <ul class="footer-menu">
@@ -11,7 +11,10 @@
                 </ul>
             </div>
             <div class="col-md-6 text-right copyright">
-                &copy;Copyright Arinerron 2017. All Rights Reserved.
+                &copy;Copyright Arinerron 2017. All Rights Reserved.<br><br>
+                Aaron Esau<br>
+                contact@discoverjobs.info<br>
+                P.O. box 230695
             </div>
         </div>
     </div>
@@ -19,4 +22,4 @@
 
 <script src="/js/jquery.min.js"></script>
 <script src="/js/jquery.sticky.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="/js/bootstrap.min.js"></script>
